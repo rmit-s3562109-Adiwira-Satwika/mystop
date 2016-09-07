@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/text_wrapper"
+        android:background="#222222">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:layout_gravity="center"
+            android:src="@drawable/mystoplogo" />
+
+        <ImageButton
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="WIP"
+            android:id="@+id/abc"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="12dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/settings"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:clickable="true" />
+
+    </FrameLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:id="@+id/map"
+    tools:context="com.example.jordank.MyStop.MapsActivity"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        tools:layout="@layout/abc_action_bar_title_item"
+        android:layout_below="@+id/text_wrapper"
+        android:layout_alignParentBottom="true" />
+
+    <EditText
+        android:layout_width="279dp"
+        android:layout_height="30dp"
+        android:id="@+id/TFaddress"
+        android:autoText="false"
+        android:layout_gravity="center_vertical"
+        android:hint="   search destination"
+        android:layout_weight="0.89"
+        android:background="#ffffff"
+        android:layout_alignTop="@+id/map"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="Search"
+        android:id="@+id/Bsearch"
+        android:textSize="12dp"
+        android:onClick="onSearch"
+        android:nestedScrollingEnabled="false"
+        android:src="@drawable/search"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:layout_alignTop="@+id/map"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/TFaddress" />
+
+</RelativeLayout>
